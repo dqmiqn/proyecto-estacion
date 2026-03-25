@@ -7,16 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d0f14;
-    --surface: #13161d;
-    --surface2: #1a1e28;
-    --border: rgba(255,255,255,0.07);
-    --accent: #e8c547;
-    --accent2: #4a9eff;
-    --accent3: #5ce8a4;
-    --text: #e8eaf0;
-    --muted: #7a7f8e;
-    --red: #ff5e5e;
+    --bg: #F5F7FB;
+    --surface: #FFFFFF;
+    --surface2: #EEF3FB;
+    --border: #E2E8F0;
+    --accent: #D97706;
+    --accent2: #2563EB;
+    --accent3: #16A34A;
+    --text: #1B2A4A;
+    --muted: #64748B;
+    --red: #DC2626;
     --neg: #ff5e5e;
     --pos: #5ce8a4;
   }
@@ -41,42 +41,42 @@
     content: '';
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse 70% 80% at 80% -20%, rgba(92,232,164,0.10) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 60% at -10% 100%, rgba(74,158,255,0.07) 0%, transparent 50%);
+      radial-gradient(ellipse 70% 80% at 80% -20%, rgba(37,99,235,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at -10% 100%, rgba(217,119,6,0.05) 0%, transparent 50%);
     pointer-events: none;
   }
   .hero-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent3); margin-bottom: 16px; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; color: #fff; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; color: #0F1F3D; }
   .hero h1 span { color: var(--accent3); }
-  .hero-sub { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  .hero-sub { font-size: 14px; color: #64748B; margin-top: 10px; }
 
   /* KPI STRIP */
   .kpi-strip {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1px;
-    background: var(--border);
-    border-bottom: 1px solid var(--border);
+    background: #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
   }
   .kpi {
-    background: var(--surface2);
+    background: #FFFFFF;
     padding: 28px 28px 24px;
     position: relative;
     overflow: hidden;
     transition: background 0.2s;
   }
-  .kpi:hover { background: #1e2230; }
+  .kpi:hover { background: #E8EFFC; }
   .kpi::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 2px;
   }
-  .kpi.green::after  { background: var(--accent3); }
-  .kpi.blue::after   { background: var(--accent2); }
-  .kpi.yellow::after { background: var(--accent); }
-  .kpi.red::after    { background: var(--red); }
-  .kpi.white::after  { background: #fff; }
+  .kpi.green::after  { background: #16A34A; }
+  .kpi.blue::after   { background: #2563EB; }
+  .kpi.yellow::after { background: #D97706; }
+  .kpi.red::after    { background: #DC2626; }
+  .kpi.white::after  { background: #1B2A4A; }
 
   .kpi-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
   .kpi-value { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1; }
@@ -84,7 +84,7 @@
   .kpi-value.blue   { color: var(--accent2); }
   .kpi-value.yellow { color: var(--accent); }
   .kpi-value.red    { color: var(--red); }
-  .kpi-value.white  { color: #fff; }
+  .kpi-value.white  { color: #1B2A4A; }
   .kpi-sub { font-size: 12px; color: var(--muted); margin-top: 6px; }
 
   /* CONTENT */
@@ -99,7 +99,7 @@
   }
   .section-title::before {
     content: ''; width: 4px; height: 16px;
-    background: var(--accent3); border-radius: 2px; display: inline-block;
+    background: #2563EB; border-radius: 2px; display: inline-block;
   }
 
   /* P&L TABLE */
@@ -116,37 +116,37 @@
     font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
     color: var(--accent2); font-weight: 600;
     border-bottom: 1px solid var(--border);
-    background: rgba(74,158,255,0.05);
+    background: rgba(37,99,235,0.05);
   }
   .pl-row {
     display: flex; justify-content: space-between; align-items: center;
     padding: 11px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(37,99,235,0.04);
     font-size: 13.5px;
     transition: background 0.15s;
   }
-  .pl-row:hover { background: rgba(255,255,255,0.025); }
+  .pl-row:hover { background: rgba(37,99,235,0.03); }
   .pl-row:last-child { border-bottom: none; }
   .pl-row.subtotal {
-    background: rgba(255,255,255,0.03);
+    background: rgba(37,99,235,0.03);
     font-weight: 600;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
   .pl-row.total {
-    background: rgba(92,232,164,0.07);
+    background: rgba(22,163,74,0.06);
     font-weight: 700;
     font-size: 15px;
-    border-top: 2px solid rgba(92,232,164,0.3);
+    border-top: 2px solid rgba(22,163,74,0.25);
   }
   .pl-row.total-usd {
-    background: rgba(74,158,255,0.07);
+    background: rgba(37,99,235,0.06);
     font-weight: 700;
     font-size: 14px;
     color: var(--accent2);
-    border-top: 1px solid rgba(74,158,255,0.25);
+    border-top: 1px solid rgba(37,99,235,0.25);
   }
-  .pl-label { color: var(--text); }
+  .pl-label { color: #1B2A4A; }
   .pl-label.sub { padding-left: 14px; color: var(--muted); font-size: 13px; }
   .pl-val { font-weight: 500; white-space: nowrap; }
   .pl-val.pos { color: var(--accent3); }
@@ -168,18 +168,18 @@
   .flujo-table td {
     padding: 11px 12px;
     font-size: 13px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(37,99,235,0.04);
     white-space: nowrap;
   }
   .flujo-table td:not(:first-child) { text-align: right; }
-  .flujo-table tr:hover td { background: rgba(255,255,255,0.025); }
+  .flujo-table tr:hover td { background: rgba(37,99,235,0.03); }
   .flujo-table .row-label { color: var(--muted); font-size: 11px; }
-  .flujo-table .row-inv td { color: var(--red); font-weight: 600; }
-  .flujo-table .row-res td:not(:first-child) { color: var(--accent3); font-weight: 500; }
+  .flujo-table .row-inv td { color: #DC2626; font-weight: 600; }
+  .flujo-table .row-res td:not(:first-child) { color: #16A34A; font-weight: 500; }
   .flujo-table .row-fnf td:not(:first-child) { color: var(--text); }
-  .flujo-table .row-fnf td:nth-child(2) { color: var(--red); font-weight: 600; }
-  .flujo-table .row-fdes td:not(:first-child) { color: var(--accent2); font-size: 12px; }
-  .flujo-table .row-fdes td:nth-child(2) { color: var(--red); }
+  .flujo-table .row-fnf td:nth-child(2) { color: #DC2626; font-weight: 600; }
+  .flujo-table .row-fdes td:not(:first-child) { color: #2563EB; font-size: 12px; }
+  .flujo-table .row-fdes td:nth-child(2) { color: #DC2626; }
   .flujo-table .row-acum td { font-weight: 500; }
   .flujo-table .row-total td { border-top: 2px solid var(--border); font-weight: 700; color: var(--accent); font-size: 14px; }
 
@@ -192,11 +192,11 @@
     font-size: 11px;
     font-weight: 600;
   }
-  .pct-60  { background: rgba(255,94,94,0.15); color: var(--red); }
-  .pct-70  { background: rgba(232,197,71,0.15); color: var(--accent); }
-  .pct-80  { background: rgba(232,197,71,0.20); color: var(--accent); }
-  .pct-90  { background: rgba(92,232,164,0.15); color: var(--accent3); }
-  .pct-100 { background: rgba(92,232,164,0.20); color: var(--accent3); }
+  .pct-60  { background: rgba(220,38,38,0.1); color: #DC2626; }
+  .pct-70  { background: rgba(217,119,6,0.1); color: #D97706; }
+  .pct-80  { background: rgba(217,119,6,0.15); color: #D97706; }
+  .pct-90  { background: rgba(22,163,74,0.1); color: #16A34A; }
+  .pct-100 { background: rgba(22,163,74,0.15); color: #16A34A; }
 
   /* PAYBACK CHART */
   .payback-section { margin-top: 52px; }
@@ -223,12 +223,12 @@
   /* SUPUESTO NOTE */
   .note {
     margin-top: 32px;
-    background: rgba(74,158,255,0.06);
-    border: 1px solid rgba(74,158,255,0.2);
+    background: rgba(37,99,235,0.05);
+    border: 1px solid rgba(37,99,235,0.2);
     border-radius: 10px;
     padding: 14px 20px;
     font-size: 13px;
-    color: var(--accent2);
+    color: #2563EB;
     display: flex; gap: 10px; align-items: flex-start;
   }
   .note svg { flex-shrink: 0; margin-top: 1px; }
@@ -258,11 +258,11 @@
   <div class="hero-label">Flujo Financiero Proyectado — Caso Real</div>
   <h1>Análisis de <span>Resultado</span><br>Estación de Servicio Modelo YPF</h1>
   <div style="display:flex; gap:10px; padding-top:6px; flex-shrink:0;">
-      <a href="https://dqmiqn.github.io/proyeccion-estacion/" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.05); color:#e8eaf0; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; text-decoration:none; white-space:nowrap; transition:background 0.2s, border-color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.borderColor='rgba(255,255,255,0.15)'">
+      <a href="https://dqmiqn.github.io/proyeccion-estacion/" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:1px solid rgba(37,99,235,0.15); background:rgba(37,99,235,0.05); color:#1B2A4A; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; text-decoration:none; white-space:nowrap; transition:background 0.2s, border-color 0.2s;" onmouseover="this.style.background='rgba(37,99,235,0.08)';this.style.borderColor='rgba(37,99,235,0.3)'" onmouseout="this.style.background='rgba(37,99,235,0.05)';this.style.borderColor='rgba(37,99,235,0.15)'">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
         Ver Supuestos
       </a>
-      <a href="javascript:location.reload()" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:1px solid rgba(92,232,164,0.35); background:rgba(92,232,164,0.08); color:#5ce8a4; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; text-decoration:none; white-space:nowrap; transition:background 0.2s, border-color 0.2s;" onmouseover="this.style.background='rgba(92,232,164,0.15)';this.style.borderColor='rgba(92,232,164,0.6)'" onmouseout="this.style.background='rgba(92,232,164,0.08)';this.style.borderColor='rgba(92,232,164,0.35)'">
+      <a href="javascript:location.reload()" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:1px solid rgba(22,163,74,0.35); background:rgba(22,163,74,0.08); color:#16A34A; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; text-decoration:none; white-space:nowrap; transition:background 0.2s, border-color 0.2s;" onmouseover="this.style.background='rgba(22,163,74,0.15)';this.style.borderColor='rgba(22,163,74,0.6)'" onmouseout="this.style.background='rgba(22,163,74,0.08)';this.style.borderColor='rgba(22,163,74,0.35)'">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         Ver Análisis
       </a>
@@ -274,27 +274,27 @@
 <div class="kpi-strip">
   <div class="kpi green">
     <div class="kpi-label">Rentabilidad Bruta Anual</div>
-    <div class="kpi-value green">$ 1.376 M</div>
-    <div class="kpi-sub">Margen bruto: 21,5%</div>
+    <div class="kpi-value green">$1.712.064.955</div>
+    <div class="kpi-sub">Margen bruto: 19,8%</div>
   </div>
   <div class="kpi green">
     <div class="kpi-label">Rentabilidad Neta Anual</div>
-    <div class="kpi-value green">$ 764 M</div>
-    <div class="kpi-sub">USD 538.218 / año (plena capacidad)</div>
+    <div class="kpi-value green">$1.010.897.074</div>
+    <div class="kpi-sub">USD 716.948 / año (plena capacidad)</div>
   </div>
   <div class="kpi blue">
     <div class="kpi-label">VAN (10% anual)</div>
-    <div class="kpi-value blue">USD 622.220</div>
+    <div class="kpi-value blue">USD 1.828.523</div>
     <div class="kpi-sub">Valor actual neto positivo</div>
   </div>
   <div class="kpi yellow">
     <div class="kpi-label">TIR</div>
-    <div class="kpi-value yellow">13,26%</div>
+    <div class="kpi-value yellow">18,94%</div>
     <div class="kpi-sub">Superior a tasa de descuento (10%)</div>
   </div>
   <div class="kpi white">
     <div class="kpi-label">Período de Recupero</div>
-    <div class="kpi-value white">11,9 años</div>
+    <div class="kpi-value white">8,4 años</div>
     <div class="kpi-sub">Flujos actualizados acumulados</div>
   </div>
 </div>
@@ -315,7 +315,7 @@
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Comisiones YPF — Líquidos</span>
-          <span class="pl-val pos">$ 737.918.333</span>
+          <span class="pl-val pos">$1.075.136.982</span>
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Servicombras</span>
@@ -327,11 +327,11 @@
         </div>
         <div class="pl-row subtotal">
           <span class="pl-label">Total Ingresos</span>
-          <span class="pl-val pos">$2.207.443.613</span>
+          <span class="pl-val pos">$2.544.662.262</span>
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Costo Venta GNC</span>
-          <span class="pl-val neg">-$ 354.263.920</span>
+          <span class="pl-val neg">-$ 355.597.307</span>
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Costo Venta Servicombras</span>
@@ -343,11 +343,11 @@
         </div>
         <div class="pl-row subtotal">
           <span class="pl-label">Total Costo de Venta</span>
-          <span class="pl-val neg">-$ 831.263.920</span>
+          <span class="pl-val neg">-$ 832.597.307</span>
         </div>
         <div class="pl-row total">
           <span class="pl-label">Rentabilidad Bruta</span>
-          <span class="pl-val pos">$1.376.179.692 <span class="pl-pct">(21,5%)</span></span>
+          <span class="pl-val pos">$1.712.064.955 <span class="pl-pct">(19,8%)</span></span>
         </div>
       </div>
 
@@ -360,11 +360,11 @@
         </div>
         <div class="pl-row">
           <span class="pl-label sub">IIBB (imputado por rubro)</span>
-          <span class="pl-val neg">-$ 61.808.421</span>
+          <span class="pl-val neg">-$ 131.293.475</span>
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Impuestos Municipales</span>
-          <span class="pl-val neg">-$ 11.037.218</span>
+          <span class="pl-val neg">-$ 17.064.708</span>
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Electricidad GNC</span>
@@ -372,11 +372,11 @@
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Gasto Financiero Bancario</span>
-          <span class="pl-val neg">-$ 58.865.163</span>
+          <span class="pl-val neg">-$ 67.857.660</span>
         </div>
         <div class="pl-row subtotal">
           <span class="pl-label">Gastos imputados por rubro</span>
-          <span class="pl-val neg">-$ 439.204.578</span>
+          <span class="pl-val neg">-$ 523.709.620</span>
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Electricidad (general)</span>
@@ -388,15 +388,15 @@
         </div>
         <div class="pl-row">
           <span class="pl-label sub">Varios / Adm. (incl. encargado)</span>
-          <span class="pl-val neg">-$ 89.522.241</span>
+          <span class="pl-val neg">-$ 94.274.465</span>
         </div>
         <div class="pl-row total">
           <span class="pl-label">Rentabilidad Neta Anual ARS</span>
-          <span class="pl-val pos">$ 764.269.077 <span class="pl-pct">(12,0%)</span></span>
+          <span class="pl-val pos">$1.010.897.074 <span class="pl-pct">(11,7%)</span></span>
         </div>
         <div class="pl-row total-usd">
           <span class="pl-label">Rentabilidad Neta Anual USD</span>
-          <span class="pl-val blu">USD 538.218</span>
+          <span class="pl-val blu">USD 716.948</span>
         </div>
       </div>
 
@@ -427,7 +427,7 @@
             <th>Año 13</th>
             <th>Año 14</th>
             <th>Año 15</th>
-            <th style="color:var(--accent);border-left:1px solid var(--border);">Total</th>
+            <th style="color:var(--accent);border-left:1px solid #E2E8F0;">Total</th>
           </tr>
         </thead>
         <tbody>
@@ -450,7 +450,7 @@
             <td><span class="pct-pill pct-100">100%</span></td>
             <td><span class="pct-pill pct-100">100%</span></td>
             <td><span class="pct-pill pct-100">100%</span></td>
-            <td style="border-left:1px solid var(--border);">—</td>
+            <td style="border-left:1px solid #E2E8F0;">—</td>
           </tr>
 
           <!-- INVERSIÓN -->
@@ -460,95 +460,95 @@
             <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
             <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
             <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
-            <td style="border-left:1px solid var(--border);">—</td>
+            <td style="border-left:1px solid #E2E8F0;">—</td>
           </tr>
 
           <!-- RESULTADO -->
           <tr class="row-res">
             <td>Resultado anual</td>
             <td style="color:var(--muted);">—</td>
-            <td>189.218</td>
-            <td>276.468</td>
-            <td>363.718</td>
-            <td>450.968</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td style="border-left:1px solid var(--border); color:var(--accent3); font-weight:700;">7.200.766</td>
+            <td>294.160</td>
+            <td>399.857</td>
+            <td>505.554</td>
+            <td>611.251</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td style="border-left:1px solid #E2E8F0; color:#16A34A; font-weight:700;">9.697.253</td>
           </tr>
 
           <!-- FLUJO NETO -->
           <tr class="row-fnf">
             <td style="font-weight:500;">Flujo Neto de Fondos</td>
             <td>-2.747.215</td>
-            <td>189.218</td>
-            <td>276.468</td>
-            <td>363.718</td>
-            <td>450.968</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td>538.218</td>
-            <td style="border-left:1px solid var(--border); color:var(--accent); font-weight:700;">4.453.551</td>
+            <td>294.160</td>
+            <td>399.857</td>
+            <td>505.554</td>
+            <td>611.251</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td>716.948</td>
+            <td style="border-left:1px solid #E2E8F0; color:#D97706; font-weight:700;">6.950.039</td>
           </tr>
 
           <!-- FNF ACTUALIZADOS -->
           <tr class="row-fdes">
             <td class="row-label">FNF Actualizados (10%)</td>
             <td>-2.747.215</td>
-            <td>172.016</td>
-            <td>228.486</td>
-            <td>273.267</td>
-            <td>308.017</td>
-            <td>334.191</td>
-            <td>303.810</td>
-            <td>276.191</td>
-            <td>251.083</td>
-            <td>228.257</td>
-            <td>207.506</td>
-            <td>188.642</td>
-            <td>171.493</td>
-            <td>155.902</td>
-            <td>141.730</td>
-            <td>128.845</td>
-            <td style="border-left:1px solid var(--border);">—</td>
+            <td>267.418</td>
+            <td>330.460</td>
+            <td>379.830</td>
+            <td>417.493</td>
+            <td>445.168</td>
+            <td>404.699</td>
+            <td>367.908</td>
+            <td>334.462</td>
+            <td>304.056</td>
+            <td>276.415</td>
+            <td>251.286</td>
+            <td>228.442</td>
+            <td>207.674</td>
+            <td>188.795</td>
+            <td>171.632</td>
+            <td style="border-left:1px solid #E2E8F0;">—</td>
           </tr>
 
           <!-- ACUMULADOS -->
           <tr class="row-acum">
             <td class="row-label">FNF Acumulado Actualizado</td>
-            <td style="color:var(--red);">-2.747.215</td>
-            <td style="color:var(--red);">-2.575.198</td>
-            <td style="color:var(--red);">-2.346.712</td>
-            <td style="color:var(--red);">-2.073.446</td>
-            <td style="color:var(--red);">-1.765.429</td>
-            <td style="color:var(--red);">-1.431.238</td>
-            <td style="color:var(--red);">-1.127.428</td>
-            <td style="color:var(--red);">-851.237</td>
-            <td style="color:var(--red);">-600.155</td>
-            <td style="color:var(--red);">-371.898</td>
-            <td style="color:var(--red);">-164.392</td>
-            <td style="color:var(--accent3); font-weight:700;">+24.250 ✓</td>
-            <td style="color:var(--accent3);">+195.743</td>
-            <td style="color:var(--accent3);">+351.645</td>
-            <td style="color:var(--accent3);">+493.375</td>
-            <td style="color:var(--accent3);">+622.220</td>
-            <td style="border-left:1px solid var(--border); color:var(--accent3); font-weight:700;">VAN: 622.220</td>
+            <td style="color:#DC2626;">-2.747.215</td>
+            <td style="color:#DC2626;">-2.479.797</td>
+            <td style="color:#DC2626;">-2.149.336</td>
+            <td style="color:#DC2626;">-1.769.506</td>
+            <td style="color:#DC2626;">-1.352.013</td>
+            <td style="color:#DC2626;">-906.845</td>
+            <td style="color:#DC2626;">-502.146</td>
+            <td style="color:#DC2626;">-134.238</td>
+            <td style="color:#16A34A; font-weight:700;">+200.223 ✓</td>
+            <td style="color:#16A34A;">+504.279</td>
+            <td style="color:#16A34A;">+780.694</td>
+            <td style="color:#16A34A;">+1.031.980</td>
+            <td style="color:#16A34A;">+1.260.422</td>
+            <td style="color:#16A34A;">+1.468.096</td>
+            <td style="color:#16A34A;">+1.656.891</td>
+            <td style="color:#16A34A;">+1.828.523</td>
+            <td style="border-left:1px solid #E2E8F0; color:#16A34A; font-weight:700;">VAN: 1.828.523</td>
           </tr>
 
         </tbody>
@@ -559,9 +559,9 @@
     <div style="margin-top: 20px; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:28px 28px 20px;">
       <div class="chart-label">FNF acumulado actualizado — Payback (USD)</div>
       <div style="display:flex; gap:20px; margin-bottom:16px; font-size:12px;">
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#ff5e5e;opacity:0.7;display:inline-block;"></span><span style="color:#7a7f8e;">En recuperación</span></span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#5ce8a4;opacity:0.7;display:inline-block;"></span><span style="color:#7a7f8e;">Recuperado</span></span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:22px;height:0;border-top:2px dashed #e8c547;display:inline-block;"></span><span style="color:#7a7f8e;">Payback año 11,9</span></span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#DC2626;opacity:0.7;display:inline-block;"></span><span style="color:#64748B;">En recuperación</span></span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#16A34A;opacity:0.7;display:inline-block;"></span><span style="color:#64748B;">Recuperado</span></span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:22px;height:0;border-top:2px dashed #D97706;display:inline-block;"></span><span style="color:#64748B;">Payback año 11,9</span></span>
       </div>
       <div style="position:relative; width:100%; height:320px;">
         <canvas id="paybackChart"></canvas>
@@ -571,7 +571,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <script>
-    const acum = [-2747215, -2575198, -2346712, -2073446, -1765429, -1431238, -1127428, -851237, -600155, -371898, -164392, 24250, 195743, 351645, 493375, 622220];
+    const acum = [-2747215, -2479797, -2149336, -1769506, -1352013, -906845, -502146, -134238, 200223, 504279, 780694, 1031980, 1260422, 1468096, 1656891, 1828523];
     const labels = ['Año 0','Año 1','Año 2','Año 3','Año 4','Año 5','Año 6','Año 7','Año 8','Año 9','Año 10','Año 11','Año 12','Año 13','Año 14','Año 15'];
 
     const negData = acum.map(v => v < 0 ? v : 0);
@@ -581,21 +581,21 @@
       id: 'paybackLine',
       afterDraw(chart) {
         const {ctx, chartArea: {top, bottom}, scales: {x}} = chart;
-        const xPos = x.getPixelForValue(10) + (x.getPixelForValue(11) - x.getPixelForValue(10)) * 0.87;
+        const xPos = x.getPixelForValue(7) + (x.getPixelForValue(8) - x.getPixelForValue(7)) * 0.38;
         ctx.save();
         ctx.setLineDash([6, 4]);
-        ctx.strokeStyle = '#e8c547';
+        ctx.strokeStyle = '#D97706';
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         ctx.moveTo(xPos, top);
         ctx.lineTo(xPos, bottom);
         ctx.stroke();
         ctx.setLineDash([]);
-        ctx.fillStyle = '#e8c547';
+        ctx.fillStyle = '#D97706';
         ctx.font = '11px DM Sans, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillText('Payback', xPos - 6, top + 16);
-        ctx.fillText('≈ año 11,9', xPos - 6, top + 30);
+        ctx.fillText('≈ año 8,4', xPos - 6, top + 30);
         ctx.restore();
       }
     };
@@ -609,21 +609,21 @@
           {
             label: 'En recuperación',
             data: negData,
-            borderColor: '#ff5e5e',
+            borderColor: '#DC2626',
             backgroundColor: (ctx) => {
               const chart = ctx.chart;
               const {chartArea} = chart;
               if (!chartArea) return 'rgba(255,94,94,0.15)';
               const gradient = chart.ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-              gradient.addColorStop(0, 'rgba(255,94,94,0)');
-              gradient.addColorStop(1, 'rgba(255,94,94,0.25)');
+              gradient.addColorStop(0, 'rgba(220,38,38,0.05)');
+              gradient.addColorStop(1, 'rgba(220,38,38,0.2)');
               return gradient;
             },
             fill: 'origin',
             tension: 0.35,
             pointRadius: (ctx) => ctx.raw < 0 ? 4 : 0,
-            pointBackgroundColor: '#ff5e5e',
-            pointBorderColor: '#13161d',
+            pointBackgroundColor: '#DC2626',
+            pointBorderColor: '#FFFFFF',
             pointBorderWidth: 2,
             borderWidth: 2.5,
             spanGaps: true,
@@ -631,21 +631,21 @@
           {
             label: 'Recuperado',
             data: posData,
-            borderColor: '#5ce8a4',
+            borderColor: '#16A34A',
             backgroundColor: (ctx) => {
               const chart = ctx.chart;
               const {chartArea} = chart;
               if (!chartArea) return 'rgba(92,232,164,0.15)';
               const gradient = chart.ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-              gradient.addColorStop(0, 'rgba(92,232,164,0.3)');
-              gradient.addColorStop(1, 'rgba(92,232,164,0.02)');
+              gradient.addColorStop(0, 'rgba(22,163,74,0.25)');
+              gradient.addColorStop(1, 'rgba(22,163,74,0.02)');
               return gradient;
             },
             fill: 'origin',
             tension: 0.35,
             pointRadius: (ctx) => ctx.raw > 0 ? 4 : 0,
-            pointBackgroundColor: '#5ce8a4',
-            pointBorderColor: '#13161d',
+            pointBackgroundColor: '#16A34A',
+            pointBorderColor: '#FFFFFF',
             pointBorderWidth: 2,
             borderWidth: 2.5,
             spanGaps: true,
@@ -659,11 +659,11 @@
         plugins: {
           legend: { display: false },
           tooltip: {
-            backgroundColor: '#1a1e28',
-            borderColor: 'rgba(255,255,255,0.1)',
+            backgroundColor: '#EEF3FB',
+            borderColor: 'rgba(37,99,235,0.08)',
             borderWidth: 1,
-            titleColor: '#7a7f8e',
-            bodyColor: '#e8eaf0',
+            titleColor: '#64748B',
+            bodyColor: '#1B2A4A',
             padding: 12,
             callbacks: {
               title: (items) => items[0].label,
@@ -681,18 +681,18 @@
         scales: {
           x: {
             ticks: {
-              color: '#7a7f8e',
+              color: '#64748B',
               font: { size: 11, family: 'DM Sans' },
               maxRotation: 0,
               autoSkip: false,
               callback: (val, i) => labels[i].replace('Año ','')
             },
-            grid: { color: 'rgba(255,255,255,0.05)' },
-            border: { color: 'rgba(255,255,255,0.1)' }
+            grid: { color: 'rgba(37,99,235,0.05)' },
+            border: { color: 'rgba(37,99,235,0.08)' }
           },
           y: {
             ticks: {
-              color: '#7a7f8e',
+              color: '#64748B',
               font: { size: 11, family: 'DM Sans' },
               callback: (v) => {
                 const abs = Math.abs(v);
@@ -702,10 +702,10 @@
                 return sign + 'USD ' + abs;
               }
             },
-            grid: { color: 'rgba(255,255,255,0.05)' },
-            border: { color: 'rgba(255,255,255,0.1)' },
+            grid: { color: 'rgba(37,99,235,0.05)' },
+            border: { color: 'rgba(37,99,235,0.08)' },
             min: -3100000,
-            max: 800000
+            max: 2100000
           }
         }
       }
@@ -722,7 +722,7 @@
 
 <div class="footer">
   <span>Análisis Financiero — Estación Estación de Servicio Modelo YPF — Marzo 2026</span>
-  <span>TIR 13,26% · VAN USD 622.220 · Payback 11,9 años · Tasa de descuento 10%</span>
+  <span>TIR 18,94% · VAN USD 1.828.523 · Payback 8,4 años · Tasa de descuento 10%</span>
 </div>
 
 </body>
