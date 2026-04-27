@@ -561,7 +561,7 @@
       <div style="display:flex; gap:20px; margin-bottom:16px; font-size:12px;">
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#DC2626;opacity:0.7;display:inline-block;"></span><span style="color:#64748B;">En recuperación</span></span>
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#16A34A;opacity:0.7;display:inline-block;"></span><span style="color:#64748B;">Recuperado</span></span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:22px;height:0;border-top:2px dashed #D97706;display:inline-block;"></span><span style="color:#64748B;">Payback año 5,9</span></span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:22px;height:0;border-top:2px dashed #D97706;display:inline-block;"></span><span style="color:#64748B;">Payback año 6,9</span></span>
       </div>
       <div style="position:relative; width:100%; height:320px;">
         <canvas id="paybackChart"></canvas>
@@ -581,7 +581,7 @@
       id: 'paybackLine',
       afterDraw(chart) {
         const {ctx, chartArea: {top, bottom}, scales: {x}} = chart;
-        const xPos = x.getPixelForValue(5) + (x.getPixelForValue(6) - x.getPixelForValue(5)) * 0.888;
+        const xPos = x.getPixelForValue(6) + (x.getPixelForValue(7) - x.getPixelForValue(6)) * 0.889;
         ctx.save();
         ctx.setLineDash([6, 4]);
         ctx.strokeStyle = '#D97706';
@@ -595,7 +595,7 @@
         ctx.font = '11px DM Sans, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillText('Payback', xPos - 6, top + 16);
-        ctx.fillText('≈ año 5,9', xPos - 6, top + 30);
+        ctx.fillText('≈ año 6,9', xPos - 6, top + 30);
         ctx.restore();
       }
     };
